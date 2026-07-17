@@ -1,20 +1,20 @@
-#uarm臂
+#uarm
 cd lerobot
 
-#标定舵机主臂零位（静止挂臂 + 按下扳机采行程）
+#Calibrate the servo motor main arm to zero position (stationary arm + trigger press travel).
 lerobot-calibrate \
     --teleop.type=bi_openarm_servo \
     --teleop.left_arm_config.port=/dev/ttyUSB1 \
     --teleop.right_arm_config.port=/dev/ttyUSB0 \
     --teleop.id=my_openarm_servo
 
-#设置从臂can接口
+#Configure the arm CAN interface
 sudo ip link set can0 type can bitrate 1000000 dbitrate 5000000 fd on
 sudo ip link set can1 type can bitrate 1000000 dbitrate 5000000 fd on
 sudo ip link set can0 up
 sudo ip link set can1 up
 
-#标定从臂零位
+#Calibrate from arm zero position
 lerobot-calibrate \
     --robot.type=openarm_follower \
     --robot.port=can0 \
@@ -27,7 +27,7 @@ lerobot-calibrate \
     --robot.side=left \
     --robot.id=my_openarm_follower_left
 
-#舵机主臂遥操作从臂（串行读 8 路舵机，fps 建议 20–30）
+#Servo master arm remotely controls slave arm (serial read 8 servo channels, recommended fps 20–30)
 lerobot-teleoperate \
     --robot.type=bi_openarm_follower \
     --robot.left_arm_config.port=can1 \
@@ -43,23 +43,23 @@ lerobot-teleoperate \
     --display_data=false
 
 
-#mini臂
+#mini arm
 cd lerobot
 
-#标定mini主臂零位
+#Calibrate the mini main arm to zero position
 lerobot-calibrate \
     --teleop.type=bi_openarm_mini \
     --teleop.left_arm_config.port=/dev/ttyACM1 \
     --teleop.right_arm_config.port=/dev/ttyACM0 \
     --teleop.id=my_openarm_mini
 
-#设置从臂can接口
+#Configure the arm CAN interface
 sudo ip link set can0 type can bitrate 1000000 dbitrate 5000000 fd on
 sudo ip link set can1 type can bitrate 1000000 dbitrate 5000000 fd on
 sudo ip link set can0 up
 sudo ip link set can1 up
 
-#标定从臂零位
+#Calibrate from arm zero position
 lerobot-calibrate \
     --robot.type=openarm_follower \
     --robot.port=can0 \

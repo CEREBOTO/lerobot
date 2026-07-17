@@ -1,0 +1,43 @@
+{
+  "_instructions": "LeRobot mapping for PWM servo leaders. home_deg is 0 to match hanging-zero follower calibration. max_delta_deg soft-clamps leader deltas; follower joint_limits remain the hard safety clip.",
+  "left": {
+    "joints": [
+      {"joint_name": "joint_1", "servo_id": 0, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_2", "servo_id": 1, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_3", "servo_id": 2, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_4", "servo_id": 3, "sign": -1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 135.0},
+      {"joint_name": "joint_5", "servo_id": 4, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_6", "servo_id": 5, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 90.0},
+      {"joint_name": "joint_7", "servo_id": 6, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0}
+    ],
+    "gripper": {
+      "servo_id": 7,
+      "open_deg": 0.0,
+      "closed_deg": -65.0,
+      "deadband_ratio": 0.05,
+      "minimum_travel_deg": 10.0,
+      "hold_seconds": 0.75,
+      "stability_deg": 1.0
+    }
+  },
+  "right": {
+    "joints": [
+      {"joint_name": "joint_1", "servo_id": 0, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_2", "servo_id": 1, "sign": -1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_3", "servo_id": 2, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_4", "servo_id": 3, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 135.0},
+      {"joint_name": "joint_5", "servo_id": 4, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0},
+      {"joint_name": "joint_6", "servo_id": 5, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 90.0},
+      {"joint_name": "joint_7", "servo_id": 6, "sign": 1, "scale": 1.0, "home_deg": 0.0, "max_delta_deg": 120.0}
+    ],
+    "gripper": {
+      "servo_id": 7,
+      "open_deg": 0.0,
+      "closed_deg": -65.0,
+      "deadband_ratio": 0.05,
+      "minimum_travel_deg": 10.0,
+      "hold_seconds": 0.75,
+      "stability_deg": 1.0
+    }
+  }
+}
